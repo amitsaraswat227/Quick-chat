@@ -23,11 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
+.\Backened\.env  
 
-Backened\.env
-
-Backened/.env
-
-.env
-
-/Backened/.env
