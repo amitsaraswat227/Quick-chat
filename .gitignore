@@ -25,3 +25,7 @@ dist-ssr
 
 
 Backened\.env
+
+Backened/.env
+
+.env
