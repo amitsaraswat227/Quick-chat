@@ -29,3 +29,5 @@ Backened\.env
 Backened/.env
 
 .env
+
+/Backened/.env
