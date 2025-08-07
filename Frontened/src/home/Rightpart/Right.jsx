@@ -4,7 +4,6 @@ import Messages from './Messages'
 import Messagesend from './Messagesend'
 import sawConversation from '../../zustand/sawConversation'
 import { useEffect } from 'react'
-import Loading from '../../Components/Loading'
 import { useAuth } from '../../context/AuthProvider'
 import { LuSlidersHorizontal } from "react-icons/lu";
 
@@ -56,9 +55,9 @@ const NoChatSelected=()=>{
    
     <div className='flex h-screen items-center justify-center'  style={{ backgroundImage: "url('live_chat_anim_2.gif')" }}>
       <h1 className='text-center text-black mb-8'>Welcome{" "}
-        <span className='font-semibold text-xl'>{authUser.user.fullname}</span>
+        <span className='font-semibold text-2xl'>{authUser.user.fullname}</span>
         <br />
-       <span className='font-semibold'> select a chat from the list to start messaging.</span>
+       <span className='font-semibold '> select a chat from the list to start messaging.</span>
       </h1>
     </div>
     </div>

@@ -6,13 +6,18 @@ import Login from './Components/Login'
 import { useAuth } from './context/AuthProvider'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Loading from './Components/Loading'
-import toast, { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 import { MdOutlineMenu } from "react-icons/md";
+
+
+
+
 
 
 function App() {
   const [authUser,setAuthUser]=useAuth();
   console.log('Hello',authUser);
+
 
 
 

@@ -15,7 +15,7 @@ function Messagesend() {
   } 
   return (
    <form onSubmit={handleSubmit}>
-     <div className=' flex space-x-3 bg-gray-800 h-[8vh] text-white'>
+     <div className=' flex space-x-3 bg-gray-800 h-[8.4vh] text-white'>
         <div className='w-[70%] mx-4'>
             <input type="text" placeholder="Message" className="border border-gray-700 rounded-xl mt-1.5 px-4 py-3 w-full outline-none"
             value={message} 

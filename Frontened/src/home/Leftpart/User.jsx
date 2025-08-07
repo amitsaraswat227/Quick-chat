@@ -15,7 +15,7 @@ function User() {
      <div  >
        <div 
         className="hide-scrollbar overflow-y-auto flex-1"
-        style={{ maxHeight: "calc(83vh - 10vh)" }}
+        style={{ maxHeight: "calc(82vh - 10vh)" }}
       >
        {allUsers.map((user,index)=>(
         <Users key={index} user={user}/>

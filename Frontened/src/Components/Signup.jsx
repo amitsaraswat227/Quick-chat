@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { useRef } from "react";
 import { CgProfile } from "react-icons/cg";
+import { TbCameraPlus } from "react-icons/tb";
 
 function Signup() {
   //user profile
@@ -66,7 +67,7 @@ function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen  bg-slate-700 text-black  p-4">
+    <div className="flex items-center justify-center min-h-screen  bg-slate-700 text-black  p-4" style={{ backgroundImage: "url('3135763.jpg')" }}>
       <div className="w-full max-w-md bg-slate-900  rounded-2xl shadow-slate-500 shadow-lg  p-8">
         <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
           {/* Profile Picture Upload */}
@@ -80,9 +81,22 @@ function Signup() {
                 className="w-24 h-24 rounded-full object-cover mb-2"
               />
             ) : (
-              <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center mb-2 text-gray-500">
-                <CgProfile className="text-8xl" />
-              </div>
+             
+     <div className="relative w-24 h-24">
+   
+      <div className="w-full h-full rounded-full p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+       
+        <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center">
+          <CgProfile className="text-5xl text-gray-500" />
+        </div>
+      </div>
+
+     
+      <div className="absolute bottom-0 right-0 bg-gray-800 p-1.5 rounded-full border-2 border-white">
+        <TbCameraPlus className="text-white text-sm" />
+      </div>
+    </div>
+              
             )}
             <input
               type="file"
@@ -103,7 +117,7 @@ function Signup() {
               type="text"
               id="name"
               className="w-full h-11 mt-1 p-3 text-white border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="John Doe"
+              placeholder="Full name"
               {...register("fullname", { required: true })}
             />
           </div>
@@ -119,7 +133,7 @@ function Signup() {
               type="email"
               id="email"
               className="w-full h-11 mt-1 p-3 border text-white border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="you@example.com"
+              placeholder="user@example.com"
               {...register("email", { required: true })}
             />
           </div>

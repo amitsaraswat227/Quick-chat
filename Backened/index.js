@@ -6,9 +6,13 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import messageRoute from "./routes/messageroute.js";
 import { app, server } from "./Socket/server.js";
-
+import userRoute from "./routes/userroute.js";
 import { v2 as cloudinary } from "cloudinary";
 
+// const app=express();
+
+import path from "path";
+// import { server } from "./Socket/server.js";
 dotenv.config();
 
 cloudinary.config({
@@ -25,11 +29,13 @@ const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 //import the route
-import userRoute from "./routes/userroute.js";
+
 
 //mount the route
 app.use("/api/user", userRoute);
 app.use("/api/message", messageRoute);
+
+
 try {
   mongoose.connect(MONGODB_URI);
   console.log("connected to mongoDB");
@@ -37,6 +43,11 @@ try {
   console.log(error);
 }
 
+
+
+
+
 server.listen(PORT, () => {
   console.log(`sever is running on port no. ${PORT}`);
 });
+  

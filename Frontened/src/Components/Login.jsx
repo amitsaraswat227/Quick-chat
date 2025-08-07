@@ -10,7 +10,7 @@ function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+   
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -39,7 +39,7 @@ function Login() {
 
   return (
     <div>
-      <div className="flex items-center justify-center min-h-screen  bg-slate-700  text-black p-4 ">
+      <div className="flex items-center justify-center min-h-screen  bg-slate-700  text-black p-4 " style={{ backgroundImage: "url('3135763.jpg')"}}>
         <div className="w-full max-w-md bg-slate-900 rounded-2xl  p-8 shadow-slate-500 shadow-lg ">
           <div className="flex items-center justify-center ">
             <img src=".\icons8-chat-message-94.png" alt="logo" className="" />
